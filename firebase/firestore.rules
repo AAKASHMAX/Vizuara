@@ -1,0 +1,154 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /Class9th_English/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Class9th_English/{parent}/Topics9th_English/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Topics9th_English/{document} {
+      allow read: if true;
+    }
+
+
+    match /Offer_Update/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if request.auth.uid == document;
+      allow write: if request.auth.uid == document;
+      allow delete: if false;
+    }
+
+    match /Notification/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Class10th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Class10th/{parent}/Topic10th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Topic10th/{document} {
+      allow read: if true;
+    }
+
+
+    match /Class10th/{parent}/Notes10th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Notes10th/{document} {
+      allow read: if true;
+    }
+
+
+    match /Class10th/{parent}/Quiz10th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Quiz10th/{document} {
+      allow read: if true;
+    }
+
+
+    match /Class9th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Class9th/{parent}/Topic9th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Topic9th/{document} {
+      allow read: if true;
+    }
+
+
+    match /Class9th/{parent}/Notes9th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Notes9th/{document} {
+      allow read: if true;
+    }
+
+
+    match /Class9th/{parent}/Quiz9th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Quiz9th/{document} {
+      allow read: if true;
+    }
+
+
+    match /Class9th/{parent}/Question9th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Question9th/{document} {
+      allow read: if true;
+    }
+
+
+    match /Class10th/{parent}/Question10th/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/Question10th/{document} {
+      allow read: if true;
+    }
+
+  }
+}

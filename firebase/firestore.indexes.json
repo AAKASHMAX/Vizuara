@@ -1,0 +1,44 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Class9th",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "SubjectID",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "ChapterNo",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Class10th",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "SubjectID",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "ChapterNo",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "fcm_tokens",
+      "fieldPath": "fcm_token",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
+    }
+  ]
+}
